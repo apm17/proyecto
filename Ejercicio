@@ -1,0 +1,153 @@
+package ordenarcadenas;
+
+import java.util.Scanner;
+
+
+
+public class OrdenarCadenas {
+
+	
+
+	
+
+	
+
+public OrdenarCadenas()
+
+{
+
+	
+
+}
+
+
+
+public static void ordena(String[] a)
+
+
+
+{
+
+	int posMin;
+
+	String aux;
+
+	for(int i=0;i<a.length-1;i++)
+
+	{
+
+		posMin=i;
+
+		for(int j=i+1;j<a.length;j++)
+
+			if(a[posMin].compareTo(a[j])>0) posMin=j;
+
+		if(posMin!=i)
+
+		{
+
+			aux=new String(a[i]);
+
+			a[i]=a[posMin];
+
+			a[posMin]=aux;
+
+			}
+
+		}
+
+	}
+
+
+
+public static void cadena(String[] a)
+
+{
+
+	System.out.println("Array: ");
+
+	for(int i=0;i<a.length;i++)
+
+		System.out.println(a[i]);
+
+	}
+
+
+
+public static void imprimir(String a)
+
+{
+
+	System.out.println(a);
+
+}
+
+
+
+public static void main(String[] args)
+
+{
+
+	OrdenarCadenas a1 = new OrdenarCadenas();
+
+	a1.imprimir("Prueba");
+
+	
+
+	Scanner sc=new Scanner(System.in);
+
+	String[] x={"a","c","b","j","e"};
+
+	ordena(x);
+
+	cadena(x);
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+//
+
+package ordenarcadenassort;
+
+import java.util.Arrays;
+
+
+
+
+
+public class ordenarcadena {
+
+
+
+	  public static void main(String[] args) {
+
+
+
+	        String[] letras = {"a", "b", "B", "d","3","2"};
+
+	        Arrays.sort(letras);
+
+	        for (String i : letras) {
+
+	            System.out.print(i + ", ");
+
+	        }
+
+
+
+	    }
+
+	}
+
